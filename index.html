@@ -4,6 +4,9 @@
 	<title>TIY Etsy Page</title>
 	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js"></script>
+  <script type="text/javascript" src="main.js"></script>
 </head>
 
 <body>
@@ -13,7 +16,7 @@
 			<div class="header-inner">
 				<div class="logo"> </div>
 					<div class="left">
-						<form class="search-form" action="" method="">
+						<form class="search-form" action="#" method="">
 		  				<input class="search-field" type="text" placeholder="enter keywords">
 		  				<input type="submit" class="submit" value="Search">
 						</form>
@@ -34,41 +37,64 @@
 				<!--left col-->
 				<div class="left-col">
 					
-					<h4>Item Type:</h4>
-					<ul class="bullets">
+					<h4>Item Type</h4>
+					<ul class="item-type">
 						<li>All Items</li>
-						<li>Handmade</li>
-						<li>Vintage</li>
-						<li>Craft Supplies</li>
-
+						<li><a href="#">Handmade</a></li>
+						<li><a href="#">Vintage</a></li>
+						<li><a href="#">Craft Supplies</a></li>
+					</ul>
+					<hr>
+					<h4>Categories</h4>
+						<ul class="categories">
+							<li><a href="#" class="on">Handmade</a></li>
+							<li><a href="#">Weddings</a></li>
+							<li><a href="#">Housewares</a></li>
+							<li><a href="#">Woodworking</a></li>
+							<li><a href="#">Everything Else</a></li>
+							<li><a href="#">Jewelery</a></li>
+							<li><a href="#">Accessories</a></li>
+							<li><a href="#">Art</a></li>
+							<li><a href="#">Holidays</a></li>
+						</ul>
+						<hr>
+						<h4>Categories</h4>
+						<form class="price-filter" action="#" method="">
+		  				<input class="price-filter-input" type="text" placeholder="$min">
+		  				<span class="to">to</span>
+		  				<input class="price-filter-input" type="text" placeholder="$max">
+		  				<input type="submit" class="price-filter-submit" value="">
+						</form>
+						<hr class="cat">
+						<h4>Filter by Color</h4>
+						<div class="color-boxes">
+						<div class="box red"> </div>
+						<div class="box orange"> </div>
+						<div class="box yellow"> </div>
+						<div class="box green"> </div>
+						<div class="box blue"> </div>
+						<div class="box purple"> </div>
+						<div class="box black"> </div>
+						<div class="box white"> </div>
+						</div>
+						<hr class="color">
+						<h4>Ordering Options</h4>
+						<div class="ordering-opt">
+							<div class="faux-check"> </div>
+							<a href="#">Accepts Etsy Gift Cards</a>
+							<div class="faux-check"> </div>
+							<a href="#">Customizable</a>
+						</div>
+						<hr class="color">
 				</div>
 				<!--/left-col-->
 				<!--main-right-->
 				<div class="main-right">
-					<div class="right-msg">&quot;personalized whiskey barrel&quot; We found 411 items!</div>
+					<div class="right-msg"> </div>
 					<!--right col-->
 					<div class="right-col">
 
-						<div class="product"><div class="img-wrap"><img src="https://img1.etsystatic.com/056/0/8456494/il_340x270.712696183_gnhp.jpg"></div><div class="prod-title">Personalized Whiskey Barrel_1028</div><div class="seller">RCPersonalized...</div><div class="price">$49.99 USD</div>
-						</div>
-							
-						<div class="product">
-								
-						</div>
-						<div class="product">
-						</div>
-						<div class="product">
-						</div>
-						<div class="product">
-						</div>
-						<div class="product">
-						</div>
-						<div class="product">
-						</div>
-						<div class="product">
-						</div>
-						<div class="product">
-						</div>
+						
 
 					</div>
 					<!--/right col-->
