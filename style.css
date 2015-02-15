@@ -92,9 +92,53 @@ form .browse {
 	font-size: 14px;
 	color: #666666;
 }
-.browse:after {
-	background: url(imgs/arr.png) no-repeat 12px 5px;
+.header-right {
+	float: right;
+	text-align: right;
+	height: 40px;
+	box-sizing: border-box;
 }
+.header-right a {
+	color: #1692b3;
+	font-size: 13px;
+	margin-top: 34px;
+	text-decoration: none;
+}
+.signup {
+width: 61px;
+height: 34px;
+border-radius: 3px;
+background: #ffffff;
+border: 1px solid #1697b4;
+color: #1697b4;
+margin-top: 23px;
+padding: 10px;
+box-sizing: border-box;
+display: inline-block;
+font-size: 12px;
+margin-right: 12px;
+margin-left: 12px;
+}
+.reg {
+
+}
+.cart {
+background: url(imgs/cart.png) 0 -30px no-repeat;
+display: inline-block;
+height: 16px;
+width: 21px;
+margin-right: 16px;
+float: right;
+background-position: left;
+padding-top: 47px;
+font-size: 12px;
+padding-right: 18px;
+margin-left: 20px;
+color:#878787;
+}
+.header-right a:hover {
+	text-decoration:underline;
+	}
 .main {
 	background-color: #f5f5f1;
 	margin: 0 auto;
