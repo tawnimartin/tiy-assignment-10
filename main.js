@@ -24,7 +24,7 @@ var getData = function(keywords, callback) {
 
   };
 
-
+//function to truncate string and concatenate ...
 var truncateString = function truncate(string){
    
    if (string.length > 29)
@@ -33,13 +33,13 @@ var truncateString = function truncate(string){
   return string
 };
 
-
+//function to update the status at top of page with kw and using items.length for # of items
 var updateStatus = function(items, keyword) {
     var statusText = '"' + keyword + '" ' + ' We found ' + items.length + ' items!';
     return $(".right-msg").text(statusText);
 
 }
-
+//build string of template for products
 var etsyProductTemplate = _.template(
   "<div class='product'><div class='img-wrap'>" +
   "<a href='<%= url %>'><img src='<%= Images[0].url_570xN %>'></a></div>" +
@@ -47,23 +47,22 @@ var etsyProductTemplate = _.template(
   "<div class='seller'><%= Shop.shop_name %></div>" + 
   "<div class='price'>$<%= price %> USD</div></div>"
 );
-
+//main search function
+//grabs kw, passes into getData function to retrieve data
 var search = function(keyword) {
   getData(keyword, function(data){
       
     var items = data.results;
-
-    console.log(items);
-
+    //assigns right-col div to productsDiv variable
     var productsDiv = $(".right-col");
-
+    //empties whatever is in that div
     productsDiv.empty();
-
+    //updates status - passing kw and items
     updateStatus(items, keyword);
-
+    //for each item
     items.forEach(function(item){
-
-    productsDiv.append(etsyProductTemplate(item));    
+      //append into productsDiv the template
+      productsDiv.append(etsyProductTemplate(item));    
     
     });
 
@@ -72,16 +71,17 @@ var search = function(keyword) {
 
 
 $(function(){
-
+  //event listener on button
   $(".search-form").on("click", ".submit", function(event){
-    
+    //prevent form from submitting when clicked
     event.preventDefault();
+    //get keywords user has entered into field
     var keywords = $(".search-field").val();
-
+    //call search function
     search(keywords);
 
   });
 
-  
+  //call search function with "whiskey" - default, when page first loads
   search("whiskey");
 });
